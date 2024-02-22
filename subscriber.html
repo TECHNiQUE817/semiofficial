@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="subscriber.css">
+      <title>Order Form</title> 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/97c534d57a.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+<div class="header">
+
+  <div class="container">
+    <div class="nav-bar">
+        <div class="logo">
+           <a href="amp.html"><img src="images\axd-pink.png" width="125px"></a>    
+        </div>
+        <nav>    
+          <ul id="menu-items">
+              <li><a href="amp-personal.html">Personal<span class="nav-link"></span></a></li>
+              <li><a href="amp-professional.html">Professional<span class="nav-link"></span></a></li>
+              <li><a href="amp-packages.html">Packages<span class="nav-link"></span></a></li>
+              <li><a href="pricing.html">Pricing<span class="nav-link"></span></a></li>
+              <li><a href="amp-about-me.html">Per, Dom<span class="nav-link"></span></a></li>
+            </ul>
+        </nav>
+        <img src="images\menu.png" class="menu-icon" onClick="menuToggle()">
+    </div>
+  </div>
+</div>
+
+<!-----the above code is the header of the section------->
+
+<h1 class="title"><span>Are You Ready To Place An Order?</span></h1>
+<h2>Please Complete The Form Below</h2>
+<p>The turnaround time depends on the details of the design. <br> A two-day minimum turnaround is required on all orders. <br> For bulk-orders, schedule a consultation before completing the form. <br> Please email any pictures to <span class="upload">amplifiedxdom@gmail.com</span></p>
+
+  <div class="box-container">
+      <form name="submit-to-google-sheet">
+
+        <div>
+        <label for="name">Name: </label>
+        <input class="input" type="text" name="Name" for="name" placeholder="Full Name" required>
+        </div>
+
+        <br>
+
+        <div>
+          <label for="email">Email: </label>
+          <input class="input" type="text" name="Email" for="email" placeholder="Email" required>
+          </div>
+
+        <br>
+
+        <div>
+          <label for="phone">Phone No.: </label>
+          <input class="input" type="telephone" name="Phone No." for="telephone" placeholder="Phone No." required>
+          </div>
+
+        <br>
+
+        <div>
+          <label for="item-type">Item Type:</label>
+          <select class="input" name="Item Type">
+            <option value="Personal">Personal</option>
+            <option value="Professional">Professional</option>
+            <option value="Packages">Packages</option>
+          </select>
+        </div>
+
+        <br>
+
+        <div>
+          <label for="item-product">Item:</label>
+          <input class="input" type="text" name="Item" for="item" placeholder="Item Description" required>      
+        </div>
+
+        <br>
+  
+
+        <div>  
+          <label for="name">Quantity:</label> 
+          <input class="input" type="text" name="Quantity" for="quantity" placeholder="Number of Items" required> 
+        </div>
+
+        <br>
+
+      <!-- <div>  <label for="name">Color:</label>
+        <input type="text" name="Name" for="name" placeholder="Full Name" required> </div> -->
+   <!--Item color and detail color-->
+   
+
+        <div>
+        <label for="name">Size: </label>
+        <select class="input" name="Size">
+          <option value="Select">Select Option</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="XLarge">X-Large</option>
+          <option value="2X">2X</option>
+          <option value="3X">3X</option>
+          <option value="4X">4X</option>
+          <option value="5X">5X</option>
+          <option value="Varies">Varies</option>
+        </select>
+        </div>
+
+        <br>
+
+        <div>
+        <label for="additional-information">Additional Information: </label>
+        <textarea class="input textarea" type="textarea" rows="4" cols="10" wrap="hard" name="Details" for="additional-information" placeholder="Please Enter Any Key Information Including:
+        Shirt Color(s)
+        Vinyl Color(s)
+        Design Placement
+        " required></textarea>
+        </div>
+
+        <br>
+
+        <div>
+          <label for="name">Date Submitted: </label>
+          <input class="input" type="date" name="Date Submitted" for="date"  required>
+          </div>
+  
+           <br> 
+  
+          <div>
+          <label for="name">Order Requested By: </label>
+          <input class="input" type="date" name="Date Requested" for="date" min="" id="demo" required>
+          </div>
+  
+          <br>
+
+          <div>
+            <p class="pick-up">Payment Options: </p>
+            <label class="radio" for="name">Cash App</label>
+            <input  type="radio" name="Payment" for="payment" value="CashApp">
+          
+            <label class="radio" for="name">Zelle</label>
+            <input type="radio" name="Payment" for="payment" value="Zelle">
+          </div>
+
+          <br>
+
+          <div>
+            <p class="pick-up">Retrieval Options: </p>
+            <label class="radio" for="name">Pick-Up/Meet</label>
+            <input  type="radio" name="Delivery" for="delivery" value="Meet">
+          
+            <label class="radio" for="name">Ship To Address</label>
+            <input type="radio" name="Delivery" for="delivery" value="Ship">
+          </div>
+
+          <br>
+
+          <div class="submit">
+            <button class="input" type="submit" onClick="openPopup()" >Submit Request</button>
+            <div class="popup" id="popup">
+            <h2>Thank You!</h2>
+            <p>Your order is received!</p>
+            <button class="input btn" type="button" onClick="closePopup()">Ok</button>
+          </div>
+          </div>
+      </form>
+  </div>
+    
+  <!--the above code is the middle of the section-->
+  <hr>
+
+  <div class="container-footer">
+        <div class="footer">
+          <h1>Let's Keep In Touch:</h1>
+        </div>
+        <div class="footer">
+            <ul>
+              <li><a href="https://www.instagram.com/amplifiedxdom/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+              <li><a href="https://twitter.com/_domeaux" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/amplifiedxdom/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="subscriber.html"><i class="fa-solid fa-envelope"></a></i></li>
+            </ul>
+        </div>
+
+  </div>
+
+  
+
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxlIsDK9gfeatW1tZmKcXYD89CYZl1qpK3nn7IQE1Gxx0NyOZF3t3fOJS2qlXAap7oX/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+
+
+    let popup = document.getElementById("popup");
+
+    function openPopup() {
+      popup.classList.add("open-popup");
+    }
+
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+
+    var Date = new Date();
+    var month = Date.getMonth() + 1; //current month
+    var year = Date.getFullYear(); //current year
+    var tdate = Date.getDate() + 2; //current date
+
+    if(month < 10 ) {
+      month = "0" + month;
+    } 
+    if(tdate < 10) {
+      tdate = "0" + tdate;
+    }
+    var minDate = year + "-" + month + "-" + tdate; 
+    document.getElementById("demo").setAttribute("min", minDate);
+
+
+
+    var menuItems = document.getElementById("menu-items");
+
+    menuItems.style.maxHeight = "0px";
+
+    function menuToggle() {
+      if(menuItems.style.maxHeight == "0px") {
+    menuItems.style.maxHeight = "200px"
+      } else {
+    menuItems.style.maxHeight = "0px"
+      }
+    }
+  </script>
+    </body>
+  </html>
